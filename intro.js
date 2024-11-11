@@ -38,3 +38,9 @@ dropdown.addEventListener('click', () => {
 });
 
 
+fetch('https://your-backend-service.onrender.com/api/data')
+  .then(response => response.json())
+  .then(data => {
+      console.log(data.message); // Process the data received from backend
+  })
+  .catch(error => console.error('Error:', error));
